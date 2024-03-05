@@ -1,0 +1,406 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{overflow-x: hidden;}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+#menu{float: right; color: white;}
+.sidebar a {
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.active{margin-top: 50px;}
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.content {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    overflow: hidden;
+}
+#logo h1{
+    font-size: 2.5rem;
+    color: white;
+}
+#logo p{
+    margin-top: 5px;
+    text-indent: 45px;
+    font-size: x-small;
+    color: white;
+}
+
+/* sliding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+}  
+.slider-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}  
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* text */
+
+#con{
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+span{
+    color: gold;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+#left p{
+    font-size: 1.5rem;
+}
+#right-1 p,#right-2 p{
+    font-size: large;
+}
+/* about */
+
+#about h1{
+    font-size: 15rem;
+    opacity: 0.2;
+}
+#about{overflow: hidden;}
+#about h2{
+    position: relative;
+}
+#about h2::after{
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    left: 45%;
+    height: 5px;
+    width: 100%;
+    background-color: gold;
+}
+/* image containers */
+
+.img{
+    height: 350px;
+    width: 300px;
+    background-color: lightgrey;
+    margin: 35px;
+}
+.img img{
+    margin: 40px;
+    height: 150px;
+    width: auto;
+    transition: all .3s;
+}
+#im1{width: 225px;}
+.img h1{
+    margin-left: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.img img:hover{
+    transform: scale(1.1);
+}
+.img h1{transition: all .3s;}
+.img h1:hover{
+    color: gold;
+    cursor: pointer;
+}
+#side-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+#side-2{
+    height: 80vh;
+    width: 35vw;
+    background-color: gold;
+    position: absolute;
+    right: 0;
+    bottom: -300px;
+    z-index: -1;
+    /* bottom: 0; */
+}
+#side-2 h1{
+    color: lightgray;
+    font-size: 10rem;
+    transform: rotate(-90deg);
+    letter-spacing: 20px;
+}
+#mid{
+    display: flex;
+    position: relative;
+}
+#mid2{
+    background-image: linear-gradient(rgba(0,0,0,0.3),black),url("/Media/smile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 40vh;
+}
+#ind{
+    height: 400px;
+    width: 300px;
+    background-color: black;
+    border-bottom: 4px solid gold;
+    transform: translate(100px,-200px);
+}
+#ind p{
+    color: grey;
+    text-align: center;
+    padding: 14px;
+}
+#ind span{
+    font-size: 3rem;
+}
+#mid2 h1{
+    color: grey;
+    font-size: 13rem;
+    margin-top: -120px;
+    text-indent: 50px;
+}
+#mid2 #cl{
+    color: skyblue;
+    font-size: 6rem;
+    text-indent: 200px;
+    margin-bottom: 20px;
+}
+.logo img{
+    height: 60px;
+    width: auto;
+    margin: 50px;
+    transition: all .3s;
+}
+.move{
+    display: flex;
+    animation: move 20s infinite alternate;
+}
+#mid3{overflow: hidden}
+@keyframes move {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-1000px);
+    }
+    75%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+#details{
+    display: flex;
+    justify-content: center;
+}
+#det input{
+    width: 400px;
+    height: 40px;
+    margin: 10px 20px;
+    padding: 20px;
+    background-color: lightgrey;
+    border: none;
+}
+#mes{width: 840px !important;}
+button{
+    background-color: gold;
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    border-radius: 5px !important;
+    border: none;
+    transform: translate(400px,30px);
+    font-weight: bold;
+    transition: all .3s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+footer{
+    margin-top: 50px;
+    background-color: black;
+    padding: 50px 50px 0 50px;
+}
+.wrap{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer p{color: lightgray;}
+#foot{color: white;}
+.fo{
+    color: gold;
+    font-size: medium;
+    transition: all .3s;
+    cursor: pointer;
+}
+.fo:hover{color: white;}
+#cpy{
+    margin-top: 50px;
+    transform: translateX(500px);
+}
+.third{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+}
+.third::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background-color: gold;
+    height: 2px;
+    width: 160px;
+}
+@media only screen and (min-width:481px) and (max-width:768px){
+    #cpy{
+        transform: translateX(50px);
+    }
+    #det input{
+        width: 300px;
+    }
+    #mes{width: 640px !important;}
+    button{
+        transform: translate(280px,30px);
+    }
+    #mid2 h1{
+        font-size: 12rem;
+    }
+    #mid2 #cl{
+        font-size: 6rem;
+        text-indent: 160px;
+        margin-bottom: 50px;
+    }
+    #side-2{display: none;}
+    #about h1{font-size: 10rem;}
+    #about h2::after{
+        bottom: 10px;
+    }
+    #con{display: block;margin: 50px;}
+    #left p{
+        font-size: 1.5rem;
+    }
+    #right-1 p,#right-2 p{
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+    #logo h1{
+        font-size: 2.5rem;
+        margin-top: 13px;
+    }
+    #logo p{
+        text-indent:55px;
+    }
+}
+@media only screen and (min-width:320px) and (max-width:480px){
+    #cpy{
+        transform: translateX(-3px);
+    }
+    .wrap{display: block;}
+    .first,.second{margin-bottom: 30px;}
+    .third::before{
+        left: 0;
+    }
+    #det input{
+        width: 200px;
+    }
+    #mes{width: 438px !important;}
+    button{
+        transform: translate(200px,30px);
+    }
+    #mid2 h1{
+        font-size: 6rem;
+        text-indent: 50px;
+    }
+    #mid2 #cl{
+        font-size: 3rem;
+        text-indent: 120px;
+        margin-bottom: 75px;
+    }
+    #side-2{display: none;}
+    .img{margin-left: 90px;}
+    #about h1{font-size: 5rem;}
+    #about h2::after{
+        bottom: 10px;
+    }
+    #con{display: block;margin: 50px;}
+    #left p{
+        font-size: 1rem;
+    }
+    #right-1 p,#right-2 p{
+        font-size: large;
+        margin: 20px 0;
+    }
+    #logo h1{
+        font-size: 2rem;
+        margin-top: 16px;
+    }
+    #logo p{
+        text-indent: 25px;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+    nav{overflow-x: hidden;}
+    footer{overflow-x: hidden;}
+    nav{width: 100%;}
+    .slider-container{width: 100%;}
+    footer{width: 100%;}
+    #cpy{transform: translateX(170px);}
+    #about h2::after{
+        bottom: 5px;
+    }
+}
